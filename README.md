@@ -52,3 +52,4 @@ O sistema foi projetado seguindo princípios de segurança e ética clínica:
 - Identidade do paciente visível apenas ao médico responsável
 
 A arquitetura é compatível com provedores de nuvem corporativos e ambientes regulados.
+Scalable cloud infrastructure, compatible with leading market providers (e.g., GCP, Azure, AWS).
