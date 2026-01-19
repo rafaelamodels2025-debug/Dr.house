@@ -41,3 +41,14 @@ def triage(patient_data):
         return patient_feedback(patient_data)
 
     return "Encaminhado para avaliação médica"
+## Segurança e Ética
+
+O sistema foi projetado seguindo princípios de segurança e ética clínica:
+
+- Criptografia de ponta a ponta para dados sensíveis
+- Controle de acesso baseado em função (RBAC)
+- Logs de auditoria para rastreabilidade de decisões da IA
+- Processo de triagem com dados anonimizados
+- Identidade do paciente visível apenas ao médico responsável
+
+A arquitetura é compatível com provedores de nuvem corporativos e ambientes regulados.
