@@ -1,0 +1,22 @@
+curl -X 'POST' \
+'http://0.0.0.0:8000/v1/chat/completions' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+    "model": "nvidia/nemotron-3-nano",
+    "messages": [{"role":"user", "content":"Which number is larger, 9.11 or 9.8?"}],
+    "max_tokens": 64
+}'
+http://0.0.0.0:8000/v1/chat/completionsexport NGC_API_KEY=<PASTE_API_KEY_HERE>
+export LOCAL_NIM_CACHE=~/.cache/nim
+mkdir -p "$LOCAL_NIM_CACHE"
+docker run -it --rm \
+    --gpus all \
+    --shm-size=16GB \
+    -e NGC_API_KEY \
+    -v "$LOCAL_NIM_CACHE:/opt/nim/.cache" \
+    -p 8000:8000 \
+    nvcr.io/nim/nvidia/nemotron-3-nano:latest
+nvcr.io/nim/nvidia/nemotron-3-nano:latestnvcr.io$ docker login nvcr.io
+Username: $oauthtoken
+Password: <PASTE_API_KEY_HERE>
